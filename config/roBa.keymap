@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4
@@ -68,10 +67,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R                        &kp T                                                   &kp Y                 &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F                        &kp G        &lt 6 PAGE_UP             &kp HOME         &kp H                 &kp J  &kp K      &kp L    &kp AT
-&kp Z      &kp X         &kp C         &kp V                        &kp B        &lt 1 PAGE_DOWN           &kp END          &kp N                 &kp M  &kp COMMA  &kp DOT  &kp UNDER
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 LANGUAGE_5  &lt 2 SPACE  &lt_to_layer_0 5 TAB      &lt 3 BACKSPACE  &mt LEFT_SHIFT ENTER                             &kp LEFT_SHIFT
+&kp Q      &kp W         &kp E         &kp R                   &kp T                                                   &kp Y                 &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S         &kp D         &kp F                   &kp G        &lt 6 PAGE_UP             &kp HOME         &kp H                 &kp J  &kp K      &kp L    &kp LS(N2)
+&kp Z      &kp X         &kp C         &kp V                   &kp B        &lt 1 PAGE_DOWN           &kp END          &kp N                 &kp M  &kp COMMA  &kp DOT  &kp MINUS
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 LANG1  &lt 2 SPACE  &lt_to_layer_0 5 TAB      &lt 3 BACKSPACE  &mt LEFT_SHIFT ENTER                             &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -79,9 +78,9 @@
 
         FUNCTION {
             bindings = <
-&trans     &trans        &kp PRINTSCREEN       &kp LA(PRINTSCREEN)    &trans                      &trans  &kp F9  &kp F10  &kp F11  &kp F12
-&trans     &trans        &kp LEFT_PARENTHESIS  &kt RIGHT_PARENTHESIS  &trans  &trans      &trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8
-&trans     &trans        &kt LEFT_BRACKET      &kt RIGHT_BRACKET      &trans  &trans      &trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4
+&trans     &trans        &kp PSCRN             &kp LA(PSCRN)          &trans                      &trans  &kp F9  &kp F10  &kp F11  &kp F12
+&trans     &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans      &trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8
+&trans     &trans        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans      &trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT          &trans                 &trans  &trans      &trans  &trans                            &kp LEFT_SHIFT
             >;
         };
@@ -97,8 +96,8 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))     &kp UP_ARROW        &kp LC(TAB)          &trans                      &trans  &kt EXCLAMATION  &kp DOUBLE_QUOTES  &kt HASH          &kt DOLLAR
-&trans          &kp LEFT_ARROW      &kp DOWN_ARROW      &kp RIGHT_ARROW      &trans  &trans      &trans  &trans  &kp PERCENT      &kp AMPERSAND      &kt SINGLE_QUOTE  &kp NON_US_BACKSLASH
+&kp ESCAPE      &kp LC(LS(TAB))     &kp UP_ARROW        &kp LC(TAB)          &trans                      &trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH          &kp DOLLAR
+&trans          &kp LEFT_ARROW      &kp DOWN_ARROW      &kp RIGHT_ARROW      &trans  &trans      &trans  &trans  &kp PERCENT      &kp AMPERSAND      &kp SINGLE_QUOTE  &kp NON_US_BACKSLASH
 &kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)  &trans  &trans      &trans  &trans  &kp PIPE         &trans             &trans            &trans
 &trans          &trans              &kp LG(DOWN_ARROW)  &trans               &trans  &trans      &trans  &trans                                                        &kp LEFT_SHIFT
             >;
