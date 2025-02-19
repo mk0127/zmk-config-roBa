@@ -14,7 +14,3 @@ manifest:
       revision: main
   self:
     path: config
-
-west:
-  build:
-    extra_cmake_args: "-DCONFIG_ZMK_KEYMAP_JIS=y"
