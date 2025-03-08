@@ -78,10 +78,10 @@
 
         FUNCTION {
             bindings = <
-&trans     &trans          &kp PSCRN      &kp LA(PSCRN)  &trans                             &trans  &kp F9  &kp F10  &kp F11  &kp F12
-&trans     &trans          &kp LS(N8)     &kp LS(N9)     &kp SLASH      &trans      &trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8
-&trans     &kp UNDERSCORE  &kp SEMICOLON  &kp SQT        &kp LS(MINUS)  &trans      &trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4
-&kp LCTRL  &kp LEFT_WIN    &kp LEFT_ALT   &trans         &trans         &trans      &trans  &trans                            &kp LEFT_SHIFT
+&trans     &trans                &kp PSCRN      &kp LA(PSCRN)  &trans                             &trans  &kp F9  &kp F10  &kp F11  &kp F12
+&trans     &trans                &kp LS(N8)     &kp LS(N9)     &kp SLASH      &trans      &trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8
+&trans     &kp NON_US_BACKSLASH  &kp SEMICOLON  &kp SQT        &kp BACKSLASH  &trans      &trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4
+&kp LCTRL  &kp LEFT_WIN          &kp LEFT_ALT   &trans         &trans         &trans      &trans  &trans                            &kp LEFT_SHIFT
             >;
         };
 
@@ -96,10 +96,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))     &kp UP_ARROW        &kp LC(TAB)          &trans                      &trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH          &kp DOLLAR
-&trans          &kp LEFT_ARROW      &kp DOWN_ARROW      &kp RIGHT_ARROW      &trans  &trans      &trans  &trans  &kp PERCENT      &kp AMPERSAND      &kp SINGLE_QUOTE  &kp NON_US_BACKSLASH
-&kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)  &trans  &trans      &trans  &trans  &kp PIPE         &trans             &trans            &trans
-&trans          &trans              &kp LG(DOWN_ARROW)  &trans               &trans  &trans      &trans  &trans                                                        &kp LEFT_SHIFT
+&kp ESCAPE      &kp LC(LS(TAB))     &kp UP_ARROW        &kp LC(TAB)          &trans                      &trans  &kp EXCLAMATION  &kp LS(NUMBER_2)  &kp HASH    &kp DOLLAR
+&trans          &kp LEFT_ARROW      &kp DOWN_ARROW      &kp RIGHT_ARROW      &trans  &trans      &trans  &trans  &kp PERCENT      &kp LS(NUMBER_6)  &kp LS(N7)  &kp NON_US_BACKSLASH
+&kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)  &trans  &trans      &trans  &trans  &kp PIPE         &trans            &trans      &trans
+&trans          &trans              &kp LG(DOWN_ARROW)  &trans               &trans  &trans      &trans  &trans                                                 &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
