@@ -21,7 +21,13 @@ include:
  - board: seeeduino_xiao_ble
    shield: roBa_R
    snippet: studio-rpc-usb-uart
+   cmake-args:
+      - -DZMK_KEYBOARD_LAYOUT=jis
+      
  - board: seeeduino_xiao_ble
    shield: roBa_L
+   cmake-args:
+      - -DZMK_KEYBOARD_LAYOUT=jis
+      
  - board: seeeduino_xiao_ble
    shield: settings_reset
