@@ -16,28 +16,33 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
+        small_kakko {
+            bindings = <&kp LS(N8)>;
+            key-positions = <1 2>;
+        };
+
+        small_kakko2 {
+            bindings = <&kp LS(N9)>;
+            key-positions = <2 3>;
+        };
+
+        nami_1 {
+            bindings = <&kp LS(LEFT_BRACKET)>;
             key-positions = <11 12>;
         };
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
+        nami_2 {
+            bindings = <&kp LS(RIGHT_BRACKET)>;
             key-positions = <12 13>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
+        kaku_1 {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <23 24>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
+        kaku_2 {
+            bindings = <&kp RIGHT_BRACKET>;
             key-positions = <24 25>;
         };
     };
@@ -68,7 +73,7 @@
         default_layer {
             bindings = <
 &kp Q      &kp W         &kp E         &kp R                       &kp T                                                   &kp Y                 &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F                       &kp G        &lt 6 PAGE_UP             &kp HOME         &kp H                 &kp J  &kp K      &kp L    &kp LEFT_BRACKET
+&kp A      &kp S         &kp D         &kp F                       &kp G        &msc MOVE_X(10)           &lt 6 HOME       &kp H                 &kp J  &kp K      &kp L    &kp LEFT_BRACKET
 &kp Z      &kp X         &kp C         &kp V                       &kp B        &lt 1 PAGE_DOWN           &kp END          &kp N                 &kp M  &kp COMMA  &kp DOT  &kp MINUS
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 LA(GRAVE)  &lt 2 SPACE  &lt_to_layer_0 5 TAB      &lt 3 BACKSPACE  &mt LEFT_SHIFT ENTER                             &kp LEFT_SHIFT
             >;
@@ -79,18 +84,20 @@
         FUNCTION {
             bindings = <
 &kp UNDERSCORE  &trans        &kp PSCRN      &kp LA(PSCRN)  &kp INT3                          &trans  &kp F9  &kp F10  &kp F11  &kp F12
-&trans          &trans        &kp LS(N8)     &kp LS(N9)     &kp SLASH     &trans      &kp C   &trans  &kp F5  &kp F6   &kp F7   &kp F8
+&trans          &trans        &kp LS(N8)     &kp LS(N9)     &kp SLASH     &trans      &trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8
 &trans          &trans        &kp SEMICOLON  &kp SQT        &kp LS(INT1)  &trans      &trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4
 &kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT   &trans         &trans        &trans      &trans  &trans                            &kp LEFT_SHIFT
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         NUM {
             bindings = <
-&kp EQUAL        &kp KP_NUMBER_7  &kp LC(Y)             &kp LC(Z)          &kp LC(B)                                  &kp KP_EQUAL     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
-&kp PERIOD       &kp LC(X)        &kp LC(V)             &kp LC(C)          &kp LC(A)  &kp DELETE      &kp KP_NUMLOCK  &kp KP_DOT       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
-&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp LC(SINGLE_QUOTE)  &kp LC(SEMICOLON)  &kp LC(S)  &kp EQUAL       &trans          &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK
-&trans           &trans           &trans                &trans             &trans     &trans          &trans          &trans                                                              &kp KP_SLASH
+&kp EQUAL        &kp KP_NUMBER_7  &kp LC(Y)             &kp LC(Z)          &kp LC(B)                                  &kp KP_EQUAL  &kp N7        &kp N8        &kp N9        &kp KP_PLUS
+&kp PERIOD       &kp LC(X)        &kp LC(V)             &kp LC(C)          &kp LC(A)  &kp DELETE      &kp KP_NUMLOCK  &kp KP_DOT    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS
+&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp LC(SINGLE_QUOTE)  &kp LC(SEMICOLON)  &kp LC(S)  &kp DELETE      &trans          &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_ASTERISK
+&trans           &trans           &trans                &trans             &trans     &trans          &trans          &trans                                                  &kp KP_SLASH
             >;
         };
 
